@@ -6,6 +6,9 @@ class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
         fields = 'id', 'name'
+
+    def create(self, validated_data):
+        return Genre.objects.create(**validated_data)
         
 class MovieSerializer(serializers.Serializer):
     id = serializers.IntegerField(required=False)
