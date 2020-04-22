@@ -8,5 +8,6 @@ urlpatterns = [
     path('genres/<int:id>/movies/', views.movie_by_genre),
     path('login/', obtain_jwt_token),
     path('movies/', views.MovieList.as_view()),
-    path('movies/<int:id>/', views.MovieDetailed.as_view())
+    path('movies/<int:id>/', views.MovieDetailed.as_view()),
+    path('manager/', views.ManagerView.as_view())
 ]
